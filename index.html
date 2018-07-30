@@ -33,10 +33,10 @@
              * to support an additional color: pink
              */
             const pink_button = document.createElement("button");
-            const pink_text = document.createTextNode("Pink");
-            pink_button.appendChild(pink_text);
+            const pink_button_text = document.createTextNode("Pink");
+            pink_button.appendChild(pink_button_text);
             blue_button.parentNode.insertBefore(pink_button, blue_button.nextSibling);
-            pink_button.setAttribute("id", "pink_button");
+            pink_button.id = "pink_button";
             pink_button.onclick = function() {
                 color_box.className = "pink";
             }
@@ -59,8 +59,7 @@
                  * then updates the text content of "countspan"
                  * to show the current value of "count".
                  */
-                count++;
-                countspan.textContent = count;
+                countspan.textContent = ++count;
             }
             
         </script>
