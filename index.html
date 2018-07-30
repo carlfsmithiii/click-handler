@@ -7,6 +7,9 @@
             .gray {background: gray;}
             .blue {background: rgb(67, 111, 255);}
             .pink {background: pink;}
+
+            /* kenzie button */
+            .kenzie {background-image: url("kenzie.png"); background-position: center;}
         </style>
     </head>
     <body>
@@ -40,6 +43,16 @@
             pink_button.onclick = function() {
                 color_box.className = "pink";
             }
+
+            /* Bonus Round! */
+            const kenzie_button = document.createElement("button");
+            kenzie_button.appendChild(document.createTextNode("Kenzie"));
+            kenzie_button.id = "kenzie_button";
+            document.body.insertBefore(kenzie_button, pink_button.nextSibling);
+            kenzie_button.onclick = function() {
+                color_box.className = "kenzie";
+            }
+
         </script>
 
         <hr>
